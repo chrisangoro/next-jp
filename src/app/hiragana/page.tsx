@@ -1,5 +1,18 @@
-export default function Hiragana() {
+import { getHiragana } from '@/lib/hiragana';
+
+export default async function Hiragana() {
+    const hiragana = await getHiragana();
+
     return (
-        <div></div>
+        <div className='mx-auto w-fit flex items-center justify-center flex-wrap p-20'>
+            {hiragana.map((kata) => {
+                return (
+                    <div key={kata.romaji + '-' + kata.kana} className="w-1/5 p-5 flex flex-col items-center border border-gray-300">
+                        <p className='text-4xl'>{kata.kana}</p>
+                        <p className='text-sm text-gray-400'>{kata.romaji}</p>
+                    </div>
+                );
+            }) }
+        </div>
     );
 }
