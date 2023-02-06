@@ -1,4 +1,5 @@
 import * as fs from "fs/promises";
+import path from 'path';
 
 export type Kana = {
     kana: string;
@@ -7,7 +8,8 @@ export type Kana = {
 }
 
 const getHiraganaList = async () => {
-    const hiragana = JSON.parse(await fs.readFile("src/data/hiragana.json", "utf-8"));
+    const srcDirectory = path.join(process.cwd(), 'src');
+    const hiragana = JSON.parse(await fs.readFile(srcDirectory + "/data/hiragana.json", "utf-8"));
     return hiragana as Kana[];
 };
 
