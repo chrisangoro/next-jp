@@ -15,3 +15,8 @@ export async function getHiragana(): Promise<Kana[]> {
     const hiragana = await getHiraganaList();
     return hiragana;
 }
+
+export async function getIndividualHiragana(romaji: string): Promise<Kana> {
+    const hiragana = await getHiraganaList();
+    return hiragana.find((kanaObj: Kana) => kanaObj.romaji === romaji) || { kana: "", romaji: "", type: "" };
+}
