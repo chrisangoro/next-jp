@@ -44,6 +44,18 @@ export async function getIndividualHiragana(romaji: string): Promise<Kana> {
 	);
 }
 
+export async function checkHiragana(
+	kana: String,
+	romaji: String
+): Promise<boolean> {
+	const hiragana = await getHiraganaList();
+	return hiragana.find(
+		(kanaObj: Kana) => kanaObj.kana === kana && kanaObj.romaji === romaji
+	)
+		? true
+		: false;
+}
+
 export async function getKatakana(): Promise<Kana[]> {
 	const katakana = await getKatakanaList();
 	return katakana;
@@ -63,4 +75,16 @@ export async function getIndividualKatakana(romaji: string): Promise<Kana> {
 			type: "",
 		}
 	);
+}
+
+export async function checkKatakana(
+	kana: String,
+	romaji: String
+): Promise<boolean> {
+	const katakana = await getKatakanaList();
+	return katakana.find(
+		(kanaObj: Kana) => kanaObj.kana === kana && kanaObj.romaji === romaji
+	)
+		? true
+		: false;
 }

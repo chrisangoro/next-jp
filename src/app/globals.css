@@ -103,6 +103,24 @@ a {
 	text-decoration: none;
 }
 
+@keyframes horizontal-shaking {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(5px);
+	}
+	50% {
+		transform: translateX(-5px);
+	}
+	75% {
+		transform: translateX(5px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
@@ -112,3 +130,17 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.correct {
+		--tw-bg-opacity: 1;
+		@apply bg-green-800;
+	}
+
+	.incorrect {
+		--tw-bg-opacity: 1;
+		@apply bg-red-800;
+		animation: horizontal-shaking 0.3s ease-in-out;
+		/* example 5s linear 2s infinite alternate */
+	}
+}
