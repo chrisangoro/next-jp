@@ -9,7 +9,7 @@ export default async function Katakana() {
 			{katakana.map((kata) => {
 				return (
 					<Link
-						href={"/katakna/" + kata.romaji}
+						href={"/katakana/" + kata.romaji}
 						key={"katakana-" + kata.romaji + "-" + kata.kana}
 						className="flex w-1/3 flex-col items-center p-5 md:w-1/5"
 					>
