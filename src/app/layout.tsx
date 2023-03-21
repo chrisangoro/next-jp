@@ -1,6 +1,12 @@
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Inter } from '@next/font/google';
+
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+});
 
 export default function RootLayout({
 	children,
@@ -14,7 +20,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
 			<head />
-			<body className="flex min-h-screen flex-col justify-between">
+			<body className={`${inter.variable} font-sans flex min-h-screen flex-col justify-between`}>
 				<Header />
 				{children}
 				<Footer />
