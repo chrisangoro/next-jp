@@ -11,10 +11,10 @@ export default async function Katakana() {
 					<Link
 						href={"/katakana/" + kata.romaji}
 						key={"katakana-" + kata.romaji + "-" + kata.kana}
-						className="flex w-24 aspect-square bg-zinc-900 border border-zinc-500 rounded-md flex-col items-center p-5 hover:bg-zinc-500"
+						className="flex w-24 aspect-square bg-neutral-900 border border-zinc-700 rounded-md flex-col items-center p-5 hover:bg-zinc-700"
 					>
 						<p className="text-4xl">{kata.kana}</p>
-						<p className="text-sm text-gray-400">{kata.romaji}</p>
+						<p className="text-sm text-neutral-400">{kata.romaji}</p>
 					</Link>
 				);
 			})}

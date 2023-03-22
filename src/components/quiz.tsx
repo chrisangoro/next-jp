@@ -46,18 +46,18 @@ export default function Quiz(props: {
 	return (
 		<>
 			<div
-				className="grid grid-cols-[350px_auto] rounded-3xl border border-gray-300 text-center w-full"
+				className="grid grid-cols-[350px_auto] rounded-3xl border border-neutral-300 text-center w-full"
 				ref={scope}
 			>
 				<p
-					className="w-full border-b opacity-0 border-gray-300 p-20 text-6xl sm:rounded-l-3xl sm:w-auto sm:border-b-0"
+					className="w-full border-b opacity-0 border-neutral-300 p-20 text-6xl sm:rounded-l-3xl sm:w-auto sm:border-b-0"
 				>
 					{props.hiragana}
 				</p>
 				<input
 					onKeyDown={(e) => onEnter(e)}
 					name="pronunctiation"
-					className="w-full rounded-b-3xl p-20 text-center text-6xl text-gray-400 sm:rounded-r-3xl sm:rounded-bl-none sm:text-left sm:border-l"
+					className="w-full rounded-b-3xl p-20 text-center text-6xl text-neutral-400 sm:rounded-r-3xl sm:rounded-bl-none sm:text-left sm:border-l"
 					type="text"
 				></input>
 			</div>

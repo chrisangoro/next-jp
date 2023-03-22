@@ -20,7 +20,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
 			<head />
-			<body className={`${inter.variable} font-sans flex min-h-screen flex-col justify-between`}>
+			<body className={`${inter.variable} bg-stone-900 font-sans flex min-h-screen flex-col justify-between`}>
 				<Header />
 				{children}
 				<Footer />
