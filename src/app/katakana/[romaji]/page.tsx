@@ -12,8 +12,8 @@ export default async function KatakanaPage({
 			{kana.kana === "" ? (
 				<p className="text-4xl">Katakana { params.romaji } Not Found</p>
 			) : (
-				<div className="flex items-center rounded-3xl border border-gray-300">
-					<p className="flex-1 border-r border-gray-300 p-20 text-6xl">
+				<div className="flex flex-col items-center rounded-3xl border border-gray-300 sm:flex-row">
+					<p className="flex-1 border-b border-gray-300 p-20 text-6xl sm:border-r sm:border-b-0">
 						{kana.kana}
 					</p>
 					<p className="flex-1 p-20 text-6xl text-gray-400">
