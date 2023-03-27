@@ -11,7 +11,7 @@ export default function AnimatedText(props: { text: string }) {
                 return (
                     <>
                         <motion.span
-                            animate={{ y: [-30, 0], opacity: [0, 1], color: ["#000", "#FFFFFF", "#FFC9B5"] }}
+                            animate={{ y: [-15, 0], opacity: [0, 1], color: ["#000", "#FFFFFF", "#FFC9B5"] }}
                             transition={{ duration: 0.8, delay: index * 0.1}}
                             className="inline-block opacity-0"
                             key={index}

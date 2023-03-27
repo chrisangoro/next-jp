@@ -7,7 +7,7 @@ export default function Head() {
 				name="viewport"
 			/>
 			<meta name="description" content="I was bored, testing Next.js, Tailwind and Framer motion" />
-			<link rel="icon" href="/favicon.ico" />
+			<link rel="icon" href="/favicon.svg" />
 		</>
 	);
 }

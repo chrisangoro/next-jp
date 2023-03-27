@@ -1,10 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
+import kudot from "../assets/kudot.svg";
 
 export default function Header() {
 	return (
 		<div className="flex w-full justify-between py-4 px-6 font-mono">
 			<h1>
-				<Link href="/">JP</Link>
+				<Link href="/" className="flex flex-row items-center text-neutral-400">
+					<Image src={kudot} alt="logo" className="h-[20px] w-auto mr-2" />JP
+				</Link>
 			</h1>
 			<div>
 				<Link
