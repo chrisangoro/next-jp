@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 export default function Home() {
 	return (
 		// <div className="mx-auto flex flex-col w-fit flex-wrap items-center justify-center p-20">
-		<div className="grid grid-cols-[400px_auto] items-center p-20">
+		<div className="grid grid-cols-[400px_auto] max-w-7xl mx-auto my-0 items-center p-20">
 			<div>
 				<AnimatedSvg />
 			</div>
